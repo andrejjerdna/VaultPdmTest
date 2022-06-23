@@ -50,6 +50,4 @@ namespace VaultPdmTest.Controllers
                 default:
                     return BadRequest(result.Message);
             }
-        }
-    }
-}
+        } } }

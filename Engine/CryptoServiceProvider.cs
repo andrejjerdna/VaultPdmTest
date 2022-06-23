@@ -9,13 +9,6 @@ namespace VaultPdmTest.Engine
     {
         public string GetHash(string value) => GenerateHash(value);
 
-        public bool Verify(string value, string hash)
-        {
-            var currentHash =  GenerateHash(value);
-
-            return hash == currentHash ? true : false;
-        }
-
         private string GenerateHash(string value)
         {
             return Convert.ToBase64String(KeyDerivation.Pbkdf2(
